@@ -70,7 +70,7 @@ class TestTrajectory:
         traj = mn.entities.Trajectory(universe)
         traj.create_object(name="TestTrajectoryUpdate")
         print(f"{bpy.context.scene.frame_current=}")
-        print(f"{list(bpy.app.handlers.frame_change_pre)=}")
+        print(f"{list(bpy.app.handlers.frame_change_post)=}")
         bpy.context.scene.frame_set(0)
         pos_a = traj.position
         assert snapshot == pos_a

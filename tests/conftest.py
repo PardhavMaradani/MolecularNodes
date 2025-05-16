@@ -28,7 +28,7 @@ def run_around_tests():
 
     yield
     print("Post Test setup:")
-    print(f"{bpy.app.handlers.frame_change_pre=}")
+    print(f"{bpy.app.handlers.frame_change_post=}")
     print(f"{mn.session.get_session().entities.keys()=}")
     print(f"{list(bpy.data.objects)=}")
     print(f"{list(o.uuid for o in bpy.data.objects)=}")
